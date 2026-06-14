@@ -427,3 +427,28 @@ When stuck:
 2. Look at demo code in `demo/*.html`
 3. Read Ghostty source for WASM implementation details
 4. Check xterm.js docs for API compatibility questions
+
+## Owner-facing progress reporting
+
+Progress reports to the owner must be feature/functionality focused, not broad
+subsystem or file/checker focused. Name the concrete capability or operating
+function, for example `Web UI - Agent report output`, `Web UI - Owner decision
+panel`, `Advisory router - Agent recommendation`, or `Active routing -
+Controlled pilot envelope`.
+
+Each row should include:
+
+- `Feature / function`
+- `Global progress`: `done/total - NN%` when the task set is known; otherwise
+  `unknown` plus the missing evidence.
+- `Lifecycle status`: one of `Planned`, `Proposal drafted`,
+  `Requires approval`, `Approved`, `Spec done`, `Dev started`, `In review`,
+  `Implemented`, `Verified`, `Shipped`, or `Parked`.
+- `Owner task`: one of `No action`, `Requires approval`, `Approved`,
+  `Deferred`, or `Blocked`.
+- `Owner meaning`: one short plain-language sentence explaining why it matters.
+
+Avoid command-by-command, file-by-file, or checker-by-checker progress reports
+unless a failure changes the owner's decision. Routine closeouts should report
+feature impact, verification summary, commit/SHA, pushed branch, and what
+remains.
